@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python3 public_tests.py {}\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global remove_duplas\n        undertest = __import__(module)\n        remove_duplas = getattr(undertest, 'remove_duplas', None)\n\n    def test_example(self):\n        lista = [1, 1, 20, 20, 5, 1]\n        assert remove_duplas(lista) == None\n        assert lista == [1, 1, 5, 1]\n\n    def test_exemplo2(self):\n        lista = [-10, 12, -10, 12, -10, -10]\n        assert remove_duplas(lista) == None\n        assert lista == [-10, -10, -10, -10]\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Remove Duplas\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5826839769513984,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5826839769513984,
+  "key": "5826839769513984",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

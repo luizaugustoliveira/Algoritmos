@@ -1,0 +1,16 @@
+tests:
+- input: |
+    8
+    21
+    15
+    1
+    23
+    28
+    9
+    8
+    30
+    31
+  output: |
+    soma = 41
+    5 menores que 20 até a linha 8
+

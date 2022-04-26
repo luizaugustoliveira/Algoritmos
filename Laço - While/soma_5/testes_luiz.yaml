@@ -1,0 +1,95 @@
+tests:
+- input: |
+    1
+    21
+    15
+    2
+    23
+    28
+    3
+    58
+    30
+    31
+  output: |
+    soma = 21
+    4 menores que 20 até a linha 10
+
+
+- input: |
+    1
+    21
+    5
+    2
+    23
+    28
+    357
+    58
+    30
+    31
+  output: |
+    soma = 8
+    3 menores que 20 até a linha 10
+
+
+- input: |
+    1
+    21
+    5
+    188
+    23
+    28
+    357
+    58
+    30
+    31
+  output: |
+    soma = 6
+    2 menores que 20 até a linha 10
+
+
+- input: |
+    1
+    21
+    198
+    188
+    23
+    28
+    357
+    58
+    30
+    31
+  output: |
+    soma = 1
+    1 menores que 20 até a linha 10
+
+
+- input: |
+    100
+    21
+    198
+    188
+    23
+    28
+    357
+    58
+    30
+    31
+  output: |
+    soma = 0
+    0 menores que 20 até a linha 10
+
+
+- input: |
+    8
+    21
+    15
+    1
+    23
+    28
+    8
+    8
+    30
+    31
+  output: |
+    soma = 40
+    5 menores que 20 até a linha 8

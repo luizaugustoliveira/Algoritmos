@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global analisa_equidistantes\n        undertest = __import__(module)\n        analisa_equidistantes = getattr(undertest, 'analisa_equidistantes', None)\n\n    def test_exemplo_1(self):\n        assert analisa_equidistantes([3,5,15,2,4,30,10,6]) == [3,5,15,8]\n\n    def test_exmplo_2(self):\n        assert analisa_equidistantes([1,9,10,18,7]) == [7,3,10]\n\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"ignore\": [\n    \"public_tests.py\",\n    \"acceptance_tests.py\"\n  ],\n  \"tests\": [],\n  \"title\": \"Analisa Equidistantes\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5225932371525632,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5225932371525632,
+  "key": "5225932371525632",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

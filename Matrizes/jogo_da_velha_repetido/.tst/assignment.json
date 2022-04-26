@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global jogo_da_velha\n        undertest = __import__(module)\n        jogo_da_velha = getattr(undertest, 'jogo_da_velha', None)\n    \n    def test_publico1(self):\n        jogo1 = [['O', 'O', 'X'],['X', 'O', 'O'],['O', 'O', 'X'] ]\n        assert jogo_da_velha(jogo1) == 'O ganhou'\n\n    def test_publico2(self):\n        jogo2 = [['O', 'X', 'X'],['X', 'X', 'O'],['O', 'O', 'X'] ]\n        assert jogo_da_velha(jogo2) == 'Ninguem ganhou'\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"ignore\": [\n    \"public_tests.py\",\n    \"acceptance_tests.py\"\n  ],\n  \"tests\": [],\n  \"title\": \"Jogo do Velha\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5789261624246272,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5789261624246272,
+  "key": "5789261624246272",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

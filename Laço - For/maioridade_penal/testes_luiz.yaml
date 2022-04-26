@@ -1,0 +1,30 @@
+- input: |
+    Lorena Almeida Joelma Luiz Wilson
+    14 15 16 18 22 
+  output: |
+    Luiz
+    Wilson
+
+- input: |
+    Cristina Larissa Alicia Amanda Carolina
+    10 11 15 16 12
+  output: |
+
+- input: |
+    Luiz Augusto Oliveira Farias
+    15 16 22 25 
+  output: |
+    Oliveira 
+    Farias
+
+- input: |
+    Luiz
+    22 
+  output: |
+    Luiz 
+    
+- input: |
+    
+    
+  output: |
+

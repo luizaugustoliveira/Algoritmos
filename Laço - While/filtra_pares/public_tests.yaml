@@ -1,0 +1,17 @@
+- input: "8\n3\n1\n7\n4\n5\n4\n1\n6\n4\n1\n\n"
+  output: |
+    >> 0 até o momento
+    >> 1 até o momento
+    >> 2 até o momento
+    >> 2 até o momento
+    >> 2 até o momento
+    7 4
+    5 4
+
+- input: "10\n7\n3\n8\n9\n0\n12\n6\n0\n"
+  output: |
+    >> 0 até o momento
+    >> 1 até o momento
+    >> 2 até o momento
+    8 9
+    0 12

@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: \"8\\n3\\n1\\n7\\n4\\n5\\n4\\n1\\n6\\n4\\n1\\n\\n\"\n  output: |\n    >> 0 até o momento\n    >> 1 até o momento\n    >> 2 até o momento\n    >> 2 até o momento\n    >> 2 até o momento\n    7 4\n    5 4\n\n- input: \"10\\n7\\n3\\n8\\n9\\n0\\n12\\n6\\n0\\n\"\n  output: |\n    >> 0 até o momento\n    >> 1 até o momento\n    >> 2 até o momento\n    8 9\n    0 12\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Filtra Pares\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5880178834145280,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5880178834145280,
+  "key": "5880178834145280",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

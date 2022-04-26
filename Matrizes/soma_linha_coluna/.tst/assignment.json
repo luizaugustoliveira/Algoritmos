@@ -1,0 +1,38 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nsoma_linha_e_coluna = getattr(undertest, 'soma_linha_e_coluna', None)\n\nclass AcceptanceTests(unittest.TestCase):\n\n    def test_exemplo_1(self):\n        matriz = [\n            [2, 3, 5, 3, 1],\n            [3, 2, 1, 5, 6],\n            [3, 2, 3, 2, 1],\n        ]\n\n    \n        assert soma_linha_e_coluna(matriz,1,1) == 20\n        assert soma_linha_e_coluna(matriz,0,0) == 18\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "category": "public",
+        "content": "{\n  \"quality\": [\n    {\n      \"cc\": 3,\n      \"pep8\": 0,\n      \"lloc\": 8,\n      \"vhalstead\": 38.04,\n      \"header\": 4\n    }\n  ]\n}",
+        "mode": "r",
+        "name": "qcheck.json"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Soma Linha e Coluna\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5775018875158528,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5775018875158528,
+  "key": "5775018875158528",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

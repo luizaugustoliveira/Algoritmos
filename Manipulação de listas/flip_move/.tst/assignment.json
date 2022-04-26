@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global flipmove\n        undertest = __import__(module)\n        flipmove = getattr(undertest, 'flipmove', None)\n\n    def test_do_enunciado_1(self):\n        lista = [5, 8, 3, 7, 1, 6, 4, 9, 2]\n        flipmove(lista, 4)\n        assert lista == [1, 6, 4, 9, 2, 7, 3, 8, 5], lista\n\n    def test_do_enunciado_2(self):\n        lista2 = [5, 8, 3, 7, 1, 6, 4, 9, 2]\n        flipmove(lista2, 2)\n        assert lista2 == [3, 7, 1, 6, 4, 9, 2, 8, 5]\n\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Flipmove\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5884243483820032,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5884243483820032,
+  "key": "5884243483820032",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

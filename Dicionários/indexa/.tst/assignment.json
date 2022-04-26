@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global indexa\n        undertest = __import__(module)\n        indexa = getattr(undertest, 'indexa', None)\n\n    def test_exemplo(self):\n        indice = {}\n        indexa(\"Jose Silva\", indice)\n        assert indice == {\n            \"jose\": [\"Jose Silva\"],\n            \"silva\": [\"Jose Silva\"]\n        }\n\n        indexa(\"Joao Silva\", indice)\n        assert indice == {\n            \"joao\": [\"Joao Silva\"],\n            \"jose\": [\"Jose Silva\"],\n            \"silva\": [\"Jose Silva\", \"Joao Silva\"]\n        }\n\n        indexa(\"Jose Pereira\", indice)\n        assert indice == {\n            \"joao\": [\"Joao Silva\"],\n            \"jose\": [\"Jose Silva\", \"Jose Pereira\"],\n            \"silva\": [\"Jose Silva\", \"Joao Silva\"],\n            \"pereira\": [\"Jose Pereira\"]\n        }\n\n        indexa(\"Joao Silva\", indice)\n        assert indice == {\n            \"joao\": [\"Joao Silva\"],\n            \"jose\": [\"Jose Silva\", \"Jose Pereira\"],\n            \"silva\": [\"Jose Silva\", \"Joao Silva\"],\n            \"pereira\": [\"Jose Pereira\"]\n        }\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Indexa\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 6386464579387392,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 6386464579387392,
+  "key": "6386464579387392",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

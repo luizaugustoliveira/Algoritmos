@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nlogin = getattr(undertest, 'login', None)\n\nclass PublicTests(unittest.TestCase):\n   \n    def test_exemplo(self):\n        dados = {1313:['j@gmail.com'], 1226:['e@cc.com', 'd@cc.com'], 1507:['pedro@cc.com'] }\n        assert login(dados, 'd@cc.com', 1313) == False\n        assert login(dados, 'd@cc.com', 1226) == True\n        assert login(dados, 'joao@gmail.com', '123') == False\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Login\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5844866149908480,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5844866149908480,
+  "key": "5844866149908480",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

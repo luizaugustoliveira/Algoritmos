@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: |\n    10\n    4\n    5\n    10\n    7\n    3\n    -1\n    3\n    4\n    1\n    -1\n    8\n    2\n    -1\n    7\n    2\n    1\n    4\n    3\n    -1\n  name: exemplo\n  output: |\n    conjunto 1: 25\n    conjunto 4: 17\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Conjuntos Maiores\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5874789489049600,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5874789489049600,
+  "key": "5874789489049600",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

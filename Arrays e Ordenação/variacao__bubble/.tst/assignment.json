@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nundertest = __import__(sys.argv[-1].split(\".py\")[0])\nvariacao_bubble = getattr(undertest, 'variacao_bubble', None)\n\nclass PublicTests(unittest.TestCase):\n\n    def test_exemplo_1(self):\n        vetor = [6, 9, 2, 3, 1, 4]\n        assert variacao_bubble(vetor, 0, 6) == 2\n        assert vetor == [4, 1, 2, 3, 9, 6]\n       \n    def test_exemplo_2(self):\n        vetor = [8, 6, 9, 2, 3, 1, 4, 0, 7, 4]\n        assert variacao_bubble(vetor, 1, 7) == 2\n        assert vetor == [8, 4, 1, 2, 3, 9, 6, 0, 7, 4]\n       \n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Variação Bubble\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 6106431705055232,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 6106431705055232,
+  "key": "6106431705055232",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

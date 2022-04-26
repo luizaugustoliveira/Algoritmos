@@ -1,0 +1,17 @@
+- input: |
+    678.0
+    22
+    4.20
+  output: |
+    salário bruto = R$ 678.00
+    custo mensal = R$ 865.32
+    salário líquido = R$ 583.08
+
+- input: |
+    1500.0
+    1
+    1.5
+  output: |
+    salário bruto = R$ 1500.00
+    custo mensal = R$ 1800.00
+    salário líquido = R$ 1363.50

@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global squeeze\n        undertest = __import__(module)\n        squeeze = getattr(undertest, 'squeeze', None)\n\n    def test_exemplo(self):\n      nums = [3, 1, 1, 1, 4, 7, 3, 3, 2, 7]\n      assert squeeze(nums) == [3, 1, 4, 7, 3, 2, 7]\n      assert nums == [3, 1, 1, 1, 4, 7, 3, 3, 2, 7]\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"ignore\": [\n    \"public_tests.py\",\n    \"acceptance_tests.py\"\n  ],\n  \"tests\": [],\n  \"title\": \"Squeeze\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5826005975433216,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5826005975433216,
+  "key": "5826005975433216",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

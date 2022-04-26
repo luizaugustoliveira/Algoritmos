@@ -1,0 +1,51 @@
+- input: |
+    Alex Garcia
+    Augusto
+    Cristiano
+    Guilherme
+    Hettshelmeir
+    Oliveira
+    Farias
+    Tavares
+    -
+  output: |
+    "Equipe Inválida"
+
+- input: |
+    Alex Garcia
+    Augusto
+    Cristiano
+    Guilherme
+    Hettshelmeir
+    Oliveira
+    -
+  output: |
+    Modalidade -> Vôlei
+
+- input: |
+    Alex Garcia
+    Augusto
+    Cristiano
+    Guilherme
+    Hettshelmeir
+    Oliveira
+    Farias
+    -
+  output: |
+    Modalidade -> Handebol
+
+- input: |
+    Alex Garcia
+    Augusto
+    Cristiano
+    Guilherme
+    Hettshelmeir
+    Oliveira
+    Farias
+    Tavares
+    Alexandre
+    Jailma
+    Aurimar
+    -
+  output: |
+    Modalidade -> Futebol

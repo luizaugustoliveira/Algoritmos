@@ -1,0 +1,3 @@
+assert is_substring('boiada','b')
+assert is_substring('boiada','bo')
+assert is_substring('boiada','boiad')

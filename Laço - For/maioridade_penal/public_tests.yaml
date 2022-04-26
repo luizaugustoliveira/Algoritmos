@@ -1,0 +1,11 @@
+- input: |
+    Jansen Italo Ana
+    14 21 60
+  output: |
+    Italo
+    Ana
+
+- input: |
+    Cristina Larissa
+    10 11
+  output: |

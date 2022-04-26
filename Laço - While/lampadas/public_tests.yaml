@@ -1,0 +1,11 @@
+- input: |
+    ...
+    .XX.
+    XXX...X.
+    ...XXX.XX.X
+    .X.X.X.X.X
+  output: |
+    0 falhas
+    2 falha(s): 2
+    4 falha(s): 3 + 1
+    6 falha(s): 3 + 2 + 1

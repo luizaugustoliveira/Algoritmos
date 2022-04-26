@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "tests:\n- input: |\n    8\n    21\n    15\n    1\n    23\n    28\n    9\n    8\n    30\n    31\n  output: |\n    soma = 41\n    5 menores que 20 até a linha 8\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import sys\nimport random\n\nN = 1000000 if len(sys.argv) < 2 else int(sys.argv[1])\n\nseed = '' if len(sys.argv) < 3 else sys.argv[2]\nrandom.seed(seed)\n\nwith open(\"dados.txt\", mode=\"w\") as arq:\n    for i in range(N):\n        valor = random.randint(0, 1000000)\n        arq.write(f\"{valor}\\n\")\n",
+        "mode": "rw",
+        "name": "gera-dados.py"
+      },
+      {
+        "content": "{\n  \"ignore\": [\n    \"gera-dados.py\"\n  ],\n  \"tests\": [],\n  \"title\": \"Soma 5 abaixo de 20\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5272685540016128,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5272685540016128,
+  "key": "5272685540016128",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

@@ -1,0 +1,16 @@
+def alocacao_aulas(alunos):
+  wilkerson = []
+  dalton = []
+  jorge = []
+
+  for x in range(len(alunos)):
+    if alunos[x][1] >= 1 and alunos[x][1] <= 3:
+      wilkerson.append(alunos[x][0])
+    if alunos[x][1] >= 4 and alunos[x][1] <= 6:
+      dalton.append(alunos[x][0])
+    if alunos[x][1] >= 7 and alunos[x][1] <= 10:
+      jorge.append(alunos[x][0])
+
+  return [wilkerson, dalton, jorge]
+
+

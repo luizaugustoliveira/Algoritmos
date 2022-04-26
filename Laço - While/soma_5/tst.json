@@ -1,0 +1,7 @@
+{
+  "ignore": [
+    "gera-dados.py"
+  ],
+  "tests": [],
+  "title": "Soma 5 abaixo de 20"
+}

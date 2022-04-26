@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: |\n    7\n    4\n    2\n    2\n    4\n    5\n    0\n    0\n  output: |\n    4 3 2 4 5 1 0\n\n- input: |\n    5\n    7\n    2\n    2\n    1\n    5\n  output: |\n    7 3 2 1 5\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Vizinhos Diferentes\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5282949035458560,
+    "index": null,
+    "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5282949035458560,
+  "key": "5282949035458560",
+  "site": "prog1",
+  "user": "luiz.augusto.farias@ccc.ufcg.edu.br"
+}

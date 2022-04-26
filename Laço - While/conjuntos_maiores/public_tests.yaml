@@ -1,0 +1,26 @@
+- input: |
+    10
+    4
+    5
+    10
+    7
+    3
+    -1
+    3
+    4
+    1
+    -1
+    8
+    2
+    -1
+    7
+    2
+    1
+    4
+    3
+    -1
+  name: exemplo
+  output: |
+    conjunto 1: 25
+    conjunto 4: 17
+

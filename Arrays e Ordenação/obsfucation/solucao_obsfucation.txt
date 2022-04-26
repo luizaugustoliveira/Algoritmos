@@ -1,0 +1,70 @@
+def obfusca(codigo):
+
+  novoCodigo = ""
+  novoNovoCodigo = ""
+
+  #altera minuscula maiuscula
+  asteriscos = 0
+  for x in range(len(codigo)):
+    if type(codigo[x]) == str:
+      if codigo[x].islower():
+        novoCodigo += codigo[x].upper()
+        asteriscos += 1
+      elif codigo[x].isupper():
+        novoCodigo += codigo[x].lower()
+        asteriscos += 1
+      elif codigo[x] == " ":
+        novoCodigo += "*" * asteriscos
+        asteriscos = 0
+      else:
+        novoCodigo += codigo[x]
+        asteriscos += 1
+    else:
+      novoCodigo += codigo[x]
+      asteriscos += 1
+
+  #altera pelo mapeamento
+  for x in range(len(novoCodigo)):
+    if novoCodigo[x] == "A" or novoCodigo[x] == "a":
+      novoNovoCodigo += "4"
+    elif novoCodigo[x] == "B" or novoCodigo[x] == "b":
+      novoNovoCodigo += "8"
+    elif novoCodigo[x] == "E" or novoCodigo[x] == "e":
+      novoNovoCodigo += "3"
+    elif novoCodigo[x] == "G" or novoCodigo[x] == "g":
+      novoNovoCodigo += "6"
+    elif novoCodigo[x] == "I" or novoCodigo[x] == "i":
+      novoNovoCodigo += "1"
+    elif novoCodigo[x] == "L" or novoCodigo[x] == "l":
+      novoNovoCodigo += "7"
+    elif novoCodigo[x] == "S" or novoCodigo[x] == "s":
+      novoNovoCodigo += "5"
+    elif novoCodigo[x] == "O" or novoCodigo[x] == "o":
+      novoNovoCodigo += "0"
+    elif novoCodigo[x] == "4":
+      novoNovoCodigo += "A"
+    elif novoCodigo[x] == "8":
+      novoNovoCodigo += "B"
+    elif novoCodigo[x] == "3":
+      novoNovoCodigo += "E"
+    elif novoCodigo[x] == "6":
+      novoNovoCodigo += "G"
+    elif novoCodigo[x] == "1":
+      novoNovoCodigo += "I"
+    elif novoCodigo[x] == "7":
+      novoNovoCodigo += "L"
+    elif novoCodigo[x] == "5":
+      novoNovoCodigo += "S"
+    elif novoCodigo[x] == "0":
+      novoNovoCodigo += "O"
+    else:
+      novoNovoCodigo += novoCodigo[x]
+
+  return novoNovoCodigo
+
+while True:
+  codigo = input()
+  if codigo == "fim":
+    break
+  else:
+    print(obfusca(codigo))
