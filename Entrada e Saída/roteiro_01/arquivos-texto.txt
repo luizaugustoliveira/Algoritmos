@@ -1,2 +1,0 @@
-	Arquivos de texto no terminal do linux são caracteres que representam uma string maior e são usadas por editores como o Vim. Possui como principal função o armazenamento de informações e o arquivo é salvo no formato .txt .
-	Quando um arquivo não está em formato de texto ele está em formato binário. Cada byte de um arquivo de texto é usado para representar um caractere, e em arquivos binários cada byte pode ser usado para representar qualquer valor. 
